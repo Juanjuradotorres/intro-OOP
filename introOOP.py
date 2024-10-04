@@ -1,12 +1,9 @@
-#tarea
 class Persona:
     def __init__(self, nombre, edad, genero):
         self.nombre = nombre
         self.edad = edad
         self.genero = genero
-    def saludoaotro(self,nombreOtraspersona):
-        return f"Hola {self.nombre}"
-        print("Persona "+persona1+" manda a saludar a "+persona3)
+
     def mostrar_info(self):
         """Este método muestra la información básica de la persona."""
         print(f"Nombre: {self.nombre}, Edad: {self.edad}, Género: {self.genero}")
@@ -32,18 +29,23 @@ class Persona:
         else:
             print(f"{self.nombre} es menor de edad.")
 
+    def saludar_a_otra_persona(self, otra_persona):
+        """Este método permite que una persona salude a otra."""
+        print(f"Hola {otra_persona.nombre}, me llamo {self.nombre}. ¡Mucho gusto en conocerte!")
 
-# Crear una instancia de la clase Persona
+
 persona1 = Persona("Carlos", 20, "Masculino")
-persona2 = Persona("Reyna",20,"Femenina")
-persona3 = Persona("Juan",20,"Hombre")
-persona4 = Persona("Ale",19,"Pendejo")
-# Usar los métodos de la clase
-print(persona2.saludoaotro(persona4))
-persona4.mostrar_info()
-persona4.cumplir_anios()
-persona4.saludar()
-persona4.cambiar_nombre("Juan")
-persona4.es_mayor_de_edad()
+persona2 = Persona("Reyna", 20, "Femenina")
+persona3 = Persona("Juan", 20, "Hombre")
+persona4 = Persona("Ale", 19, "Hombre")
 
+
+persona1.mostrar_info()
+persona1.cumplir_anios()
+persona1.saludar()
+persona1.cambiar_nombre("Juan")
+persona1.es_mayor_de_edad()
+
+# Hacer que persona 2 salude a persona 3
+persona2.saludar_a_otra_persona(persona3)
 
